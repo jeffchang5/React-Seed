@@ -16,10 +16,10 @@ module.exports = {
   },
 
   resolve: {
-    modules: [
-      path.resolve('./src'),
-      path.resolve('./node_modules'),
-    ],
+      modules: [
+        path.resolve('./src'),
+        path.resolve('./node_modules'),
+      ],
     extensions: ['.js', '.jsx', '.js', '.json'],
   },
 
@@ -30,6 +30,7 @@ module.exports = {
       { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
     ],
   },
+
 
   externals: {
     'react': 'React',

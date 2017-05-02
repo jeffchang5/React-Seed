@@ -33,7 +33,16 @@ module.exports = function (config) {
     // tests results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['spec'],
+    // Configuration for the spec reporter.
+    specReporter: {
+      maxLogLines: 5,
+      suppressErrorSummary: true,
+      suppressFailed: false,
+      suppressPassed: false,
+      suppressSkipped: true,
+      showSpecTiming: false,
+    },
 
 
     // web server port
@@ -77,6 +86,7 @@ module.exports = function (config) {
       'karma-mocha',
       'karma-webpack',
       'karma-sourcemap-loader',
+      'karma-spec-reporter',
     ],
   });
 }

@@ -14,6 +14,6 @@ module.exports = {
     },
     "env": {
       "browser": true,
-      "jasmine": true
+      "jasmine": true,
     },
 };
