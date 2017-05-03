@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
-export default styled.section`
+export default styled.nav`
   position: fixed;
-  height: 80px;
-  width: 100%;
-  background: papayawhip;
+  height: 100%;
+  max-height:70px;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 0.05);
 `;
