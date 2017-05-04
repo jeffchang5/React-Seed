@@ -1,12 +1,11 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.jsx',
+  entry: path.resolve('./src/index.jsx'),
   output: {
     filename: 'bundle.js',
     path: path.resolve('./dist/public'),
   },
-
   devtool: 'source-map',
   target: 'web',
   devServer: {
@@ -14,15 +13,13 @@ module.exports = {
     disableHostCheck: true,
     port: 8080,
   },
-
   resolve: {
-      modules: [
-        path.resolve('./src'),
-        path.resolve('./node_modules'),
-      ],
-    extensions: ['.js', '.jsx', '.js', '.json'],
+    modules: [
+      path.resolve('./src'),
+      path.resolve('./node_modules'),
+    ],
+    extensions: ['.js', '.jsx', '.json'],
   },
-
   module: {
     rules: [
       { test: /\.jsx$/, enforce: 'pre', loader: 'eslint-loader', options: { emitWarning: true } },
@@ -30,8 +27,6 @@ module.exports = {
       { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
     ],
   },
-
-
   externals: {
     'react': 'React',
     'redux': 'Redux',
@@ -40,3 +35,4 @@ module.exports = {
     'react-redux': 'ReactRedux',
   },
 };
+

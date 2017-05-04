@@ -13,7 +13,7 @@ const AccountButton = styled.h1`
 const Title = styled.a`
   display: inline-block;
   min-height: 30px;
-  padding: 25px 5%;
+  padding: 25px 12%;
   width: 20%;
   text-decoration: none;
   font-size: 1.3em;

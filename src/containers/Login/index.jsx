@@ -1,20 +1,21 @@
 import React from 'react';
+import styled from 'styled-components';
 import LoginWrapper from './wrapper';
-import LoginHeader from './header';
-import LoginButton from './button';
-
-import Border, { rgba } from './border';
+import SunBorder from './border';
 
 
-const SunBorder = Border(rgba(206, 78, 80, 1), 40);
+const Container = styled.div`
+  position: relative;
+  top: 6%;
+  padding-top: 90px;
+`
 
 
 export default () => (
-  <SunBorder>
-    <LoginWrapper>
-      <LoginHeader>
-
-      </LoginHeader>
-    </LoginWrapper>
-  </SunBorder>
+  <Container>
+    <SunBorder>
+      <LoginWrapper>
+      </LoginWrapper>
+    </SunBorder>
+  </Container>
 );
